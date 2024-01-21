@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+
+<body ng-controller="authController" class="login-container" style="background-image: url('back.jpg');">
+    <div class="conta">
+        <div class="login-form">
+            <!-- Login/Signup Form -->
+            <form ng-show="isLogin && !isAdmin">
+                <label for="username">Username:</label>
+                <input type="text" id="username" ng-model="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" ng-model="password" required>
+
+                <button type="button" ng-click="login()">Login</button>
+
+                <p>Don't have an account? <a href="#" ng-click="toggleAuth()">Sign Up</a></p>
+
+                <!-- Admin Login Link/Button -->
+                <p>Or <a href="#" ng-click="adminLogin()">Login as Admin</a></p>
+            </form>
+
+            <!-- Signup Form -->
+            <form ng-hide="isLogin || isAdmin">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" ng-model="signupUsername" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" ng-model="email" required>
+
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" ng-model="signupPassword" required>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" ng-model="confirmPassword" required>
+
+                <button type="button" ng-click="signup()">Sign Up</button>
+
+                <p>Already have an account? <a href="#" ng-click="toggleAuth()">Login</a></p>
+            </form>
+
+            <!-- Admin Login Form -->
+            <form ng-show="isAdmin">
+                <label for="adminUsername">Admin Username:</label>
+                <input type="text" id="adminUsername" ng-model="adminUsername" required>
+
+                <label for="adminPassword">Admin Password:</label>
+                <input type="password" id="adminPassword" ng-model="adminPassword" required>
+
+                <button type="button" ng-click="adminLogin()">Login as Admin</button>
+
+                <p>Back to <a href="#" ng-click="toggleAuth()">User Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
