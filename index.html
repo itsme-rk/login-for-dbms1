@@ -14,50 +14,50 @@
         <div class="login-form">
             <!-- Login/Signup Form -->
             <form ng-show="isLogin && !isAdmin">
-                <label for="username">Username:</label>
+                <label for="username"><b>Username:</b></label>
                 <input type="text" id="username" ng-model="username" required>
 
-                <label for="password">Password:</label>
+                <label for="password"><b>Password:</b></label>
                 <input type="password" id="password" ng-model="password" required>
 
-                <button type="button" ng-click="login()">Login</button>
+                <button type="button" ng-click="login()"><b>Login</b></button>
 
-                <p>Don't have an account? <a href="#" ng-click="toggleAuth()">Sign Up</a></p>
+                <p><b>Don't have an account? </b><a href="#" ng-click="toggleAuth()"><b>Sign Up</b></a></p>
 
                 <!-- Admin Login Link/Button -->
-                <p>Or <a href="#" ng-click="adminLogin()">Login as Admin</a></p>
+                <p><b>Or </b><a href="#" ng-click="adminLogin()"><b>Login as Admin</b></a></p>
             </form>
 
             <!-- Signup Form -->
             <form ng-hide="isLogin || isAdmin">
-                <label for="signupUsername">Username:</label>
+                <label for="signupUsername"><b>Username:</b></label>
                 <input type="text" id="signupUsername" ng-model="signupUsername" required>
 
-                <label for="email">Email:</label>
+                <label for="email"><b>Email:</b></label>
                 <input type="email" id="email" ng-model="email" required>
 
-                <label for="signupPassword">Password:</label>
+                <label for="signupPassword"><b>Password: </b></label>
                 <input type="password" id="signupPassword" ng-model="signupPassword" required>
 
-                <label for="confirmPassword">Confirm Password:</label>
+                <label for="confirmPassword"><b>Confirm Password:</b></label>
                 <input type="password" id="confirmPassword" ng-model="confirmPassword" required>
 
-                <button type="button" ng-click="signup()">Sign Up</button>
-
-                <p>Already have an account? <a href="#" ng-click="toggleAuth()">Login</a></p>
+                <button type="button" ng-click="signup()"><b>Sign Up</b><b></button>
+</b>
+                <p><b>Already have an account? </b><a href="#" ng-click="toggleAuth()"><b>Login</b></a></p>
             </form>
 
             <!-- Admin Login Form -->
             <form ng-show="isAdmin">
-                <label for="adminUsername">Admin Username:</label>
+                <label for="adminUsername"><b>Admin Username:</b></label>
                 <input type="text" id="adminUsername" ng-model="adminUsername" required>
 
-                <label for="adminPassword">Admin Password:</label>
+                <label for="adminPassword"><b>Admin Password:</b></label>
                 <input type="password" id="adminPassword" ng-model="adminPassword" required>
 
-                <button type="button" ng-click="adminLogin()">Login as Admin</button>
+                <button type="button" ng-click="adminLogin()"><b>Login as Admin</b></button>
 
-                <p>Back to <a href="#" ng-click="toggleAuth()">User Login</a></p>
+                <p><b>Back to </b><a href="#" ng-click="toggleAuth()"><b>User Login</b></a></p>
             </form>
         </div>
     </div>
